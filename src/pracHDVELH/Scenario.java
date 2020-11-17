@@ -12,11 +12,14 @@ package pracHDVELH;
 public class Scenario (GUIManager gui, Event startEvent){
 	private static final String MSG_EMPTY_SCENARIO = "Sorry, no scenario was found.";
 	private static final String MSG_FINALE = "That's all folks!";
-	private Event head;
-
+	public Event head;
 	private GUIManager gui;
-		this.gui = gui;
-        this.head = startEvent;
+
+	Scenario(GUIManager gui, Event head) {
+		this.head = head;
+		th
+
+	}
 
 	/* TO BE COMPLETED */
 
