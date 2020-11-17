@@ -76,6 +76,8 @@ public class NodeMultiple {
 	 * @param daughter
 	 */
 	public void addDaughter(NodeMultiple daughter) {
+
+	}
 		/* TO BE COMPLETED */
 	}
 

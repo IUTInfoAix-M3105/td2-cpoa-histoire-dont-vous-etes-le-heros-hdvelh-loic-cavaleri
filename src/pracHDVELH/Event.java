@@ -5,6 +5,8 @@
  */
 package pracHDVELH;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import myUtils.ErrorNaiveHandler;
@@ -17,33 +19,43 @@ public class Event extends NodeMultiple {
 	public static final String ERROR_MSG_UNEXPECTED_END = "Sorry, for some unexpected reason the story ends here...";
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
+	public GUIManager gui;
+	public String data;
+	public Event (GUIManager gui, String data) {
+		this.gui = gui;
+		this.data= data;
+	}
 
 	/**
 	 * @return the playerAnswer
 	 */
 	public String getPlayerAnswer() {
-		/* TO BE COMPLETED */
+		Scanner clavier = getReader();
+		String str = clavier.next();
+		return PROMPT_ANSWER + str;
 	}
 
 	/**
 	 * @param playerAnswer the playerAnswer to set
 	 */
 	public void setPlayerAnswer(String playerAnswer) {
-		/* TO BE COMPLETED */
+
+		playerAnswer = getPlayerAnswer();
 	}
 
 	/**
 	 * @return the reader
 	 */
 	public Scanner getReader() {
-		/* TO BE COMPLETED */
+		return new Scanner(System.in);
 	}
 
 	/**
 	 * @param reader the reader to set
 	 */
 	public void setReader(Scanner reader) {
-		/* TO BE COMPLETED */
+		reader = new Scanner(System.in);
+		int a = reader.nextInt();
 	}
 
 	/**
