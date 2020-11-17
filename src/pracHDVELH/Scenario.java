@@ -17,7 +17,7 @@ public class Scenario (GUIManager gui, Event startEvent){
 
 	Scenario(GUIManager gui, Event head) {
 		this.head = head;
-		th
+		this.gui = gui;
 
 	}
 
