@@ -15,9 +15,12 @@ public class Scenario (GUIManager gui, Event startEvent){
 	public Event head;
 	private GUIManager gui;
 
-	Scenario(GUIManager gui, Event head) {
+	public Scenario(GUIManager gui, Event head) {
 		this.head = head;
 		this.gui = gui;
+
+	}
+	public Event run() {
 
 	}
 
@@ -33,7 +36,7 @@ public class Scenario (GUIManager gui, Event startEvent){
 		// **1.1
 		// ***S
 		// **1.2
-		// ***E
+		// ***
 		// *2:event2
 		// **2.1
 		// ***1

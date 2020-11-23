@@ -22,8 +22,8 @@ public class Event extends NodeMultiple {
 	public GUIManager gui;
 	public String data;
 	public Event (GUIManager gui, String data) {
-		this.gui = gui;
-		this.data= data;
+		this.gui = new GUIManager(System.in,System.out,System.err));
+		this.data = data;
 	}
 
 	/**
@@ -122,13 +122,26 @@ public class Event extends NodeMultiple {
 	/**
 	 * @return the id
 	 */
-	public int getId() {
+//	public int getId() {
 		/* TO BE COMPLETED */
-	}
+//	}
 
 	/* Methods */
 	/* TO BE COMPLETED */
+//	}
+	public Event run(){
+		gui.output(data);
+		if(hasDaughters()){
+			gui.output(PROMPT_ANSWER);
+			int t = gui.getInputReader().nextInt();
+			Event nextEvent = this.getDaughter(t - 1); //Le permier event est 0
+			nextEvent.run();
+		}
+		return this;
+
 	}
+
 }
+
 
 // eof

@@ -30,6 +30,7 @@ public class GUIManager {
    * 
    * @param args
    */
+
   public void output(String... args) {
 	StringBuilder s = new StringBuilder();
 	for (String i : args) {
